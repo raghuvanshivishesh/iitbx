@@ -4,6 +4,10 @@
    int sum_gq[]      : Integer array to be computed  */
 void getTotalGQ(int numOfStudents, int gq[], int sum_gq[]) {
     // Write your solution code below this line
+    for(int index = 0;index < 11;index++)
+    {
+        sum_gq[index]=0;
+    }
     for(int index = 0; index < numOfStudents; index++)
     {
       switch(gq[index])
@@ -54,6 +58,10 @@ void getTotalGQ(int numOfStudents, int gq[], int sum_gq[]) {
    int sum_gpa[]     : Integer array to be computed */
 void getTotalGPA(int numOfStudents, float gpa[], int sum_gpa[]) {
     // Write your solution code below this line
+    for(int index = 0;index < 4;index++)
+    {
+        sum_gpa[index]=0;
+    }
     int a;
     for(int index = 0;index < numOfStudents;index++)
     {
@@ -86,6 +94,13 @@ void getTotalGPA(int numOfStudents, float gpa[], int sum_gpa[]) {
    int count[][]     : Integer array to be computed */
 void getTotalCount(int numOfStudents, int gq[], float gpa[], int count[][5]) {
     // Write your solution code below this line
+    for(int row = 0;row < 12;row++)
+    {
+        for(int column = 0;column < 5;column++)
+        {
+            count[row][column]=0;
+        }
+    }
     int a;
     for(int index1 = 0;index1 < numOfStudents;index1++)
     {
