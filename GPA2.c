@@ -1,4 +1,3 @@
-
 /* Question          : count number of students scoring X marks in GQ and store it in 'sum_gq'
    int numOfStudents : Integer number containing the total number of students
    int gq[]          : Integer array containing the GQ marks of all students
@@ -58,22 +57,22 @@ void getTotalGPA(int numOfStudents, float gpa[], int sum_gpa[]) {
     int a;
     for(int index = 0;index < numOfStudents;index++)
     {
-      a = gpa[index] *10;
-      switch(a)
-      {
-        case 0:
-          sum_gpa[0]++;
-          break;
-        case 3:
-          sum_gpa[1]++;
-          break;
-        case 6:
-          sum_gpa[2]++;
-          break;
-        case 10:
-          sum_gpa[3]++;
-          break;
-      }
+        a = gpa[index] *10;
+        switch(a)
+        {
+            case 0:
+                sum_gpa[0]++;
+                break;
+            case 3:
+                sum_gpa[1]++;
+                break;
+            case 6:
+                sum_gpa[2]++;
+                break;
+            case 10:
+                sum_gpa[3]++;
+                break;
+        }
     }
 
 }
@@ -90,27 +89,27 @@ void getTotalCount(int numOfStudents, int gq[], float gpa[], int count[][5]) {
     int a;
     for(int index1 = 0;index1 < numOfStudents;index1++)
     {
-      for(int index = 0;index < 11;index++)
-      {
-        if(gq[index1] == index)
+        for(int index = 0;index < 11;index++)
         {
-          a = gpa[index1]*10;
-          switch (a) {
-            case 0:
-              count[index][0]++;
-              break;
-            case 3:
-              count[index][1]++;
-              break;
-            case 6:
-              count[index][2]++;
-              break;
-            default:
-              count[index][3]++;
-              break;
+            if(gq[index1] == index)
+            {
+                a = gpa[index1]*10;
+                switch (a) {
+                    case 0:
+                        count[index][0]++;
+                        break;
+                    case 3:
+                        count[index][1]++;
+                        break;
+                    case 6:
+                        count[index][2]++;
+                        break;
+                    default:
+                        count[index][3]++;
+                        break;
+                }
             }
         }
-      }
     }
     int sum;
     for(int row = 0;row < 11;row++)
