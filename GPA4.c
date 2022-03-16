@@ -10,6 +10,12 @@ struct rational *inputrational  : Actual rational number to be reduced
 struct rational *outputrational : Variable to store the rational number in its lowest form */
 void reduce(struct rational *inputrational, struct rational *outputrational) {
     //Write your solution code below this line
+    if(inputrational->numerator == 0)
+    {
+        outputrational->numerator = inputrational->numerator;
+        outputrational->denominator = 1;
+        return;
+    }
     if(inputrational->numerator == inputrational->denominator)
     {
         outputrational->numerator == 1;
